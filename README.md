@@ -13,9 +13,9 @@ triggers:
 conditions:
   - condition: template
     value_template: >
-      {{ now() - state_attr('automation.david_goggins_fridge', 'last_triggered')
+      {{ now() - state_attr('automation.motivation_fridge_opened', 'last_triggered')
       > timedelta(minutes=5) or
-         state_attr('automation.david_goggins_fridge', 'last_triggered') is none }}
+         state_attr('automation.motivation_fridge_opened', 'last_triggered') is none }}
 actions:
   - variables:
       mp3_urls:
